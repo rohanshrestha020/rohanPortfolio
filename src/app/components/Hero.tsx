@@ -1,6 +1,6 @@
 import svgPaths from "../../imports/svg-704djayzrz";
 import { motion } from "motion/react";
-import rohalImg from "../../assets/rohal_img.png";
+import rohanImg from "../../assets/rohan_img.png"
 
 export function Hero() {
   return (
@@ -87,16 +87,16 @@ export function Hero() {
       </div>
 
       {/* Portrait Image */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-[59px] w-[834px] h-[834px] max-w-[90vw] max-h-[90vw] lg:max-w-none lg:max-h-none">
+      <div className="absolute left-1/2 -translate-x-1/2 top-[59px] w-full h-full max-w-[90vw] max-h-[90vw] lg:max-w-none lg:max-h-none">
         <img
           alt="Rohan Dangol"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          src={rohalImg}
+          className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+          src={`${rohanImg}?v=2`}
         />
       </div>
 
       {/* Arrow Icon - Desktop */}
-      <div className="hidden lg:block absolute left-[1376px] top-[270px] size-[50px]">
+      <div className="hidden lg:block absolute right-[15%] xl:right-[20%] top-[25%] xl:top-[30%] size-[50px]">
         <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 50 50">
           <g>
             <path d={svgPaths.p242139c0} stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
@@ -106,7 +106,7 @@ export function Hero() {
       </div>
 
       {/* Freelance Text - Desktop */}
-      <div className="hidden lg:block absolute left-[1384px] top-[368px] font-['Bricolage_Grotesque:Medium',sans-serif] font-medium leading-[54px] text-[36px] text-white whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}>
+      <div className="hidden lg:block absolute right-[12%] xl:right-[17%] top-[35%] xl:top-[40%] font-['Bricolage_Grotesque:Medium',sans-serif] font-medium leading-[54px] text-[32px] xl:text-[36px] text-white whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}>
         <p className="mb-0">Freelance</p>
         <p className="mb-0">Designer & Developer</p>
       </div>
@@ -126,60 +126,82 @@ export function Hero() {
       </div>
 
       {/* Horizontal Line - Desktop */}
-      <div className="hidden lg:block absolute left-[1505px] top-[771px] w-[173px]">
-        <div className="rotate-[0.33deg]">
-          <svg className="block w-full h-3" fill="none" preserveAspectRatio="none" viewBox="0 0 173.003 12">
-            <line stroke="#F0F0F0" strokeWidth="12" x2="173.003" y1="6" y2="6" />
-          </svg>
-        </div>
-      </div>
-
-      {/* Name Title - Desktop */}
-      <div className="hidden lg:block absolute left-0 top-[663px] w-full h-[182px] overflow-hidden">
-        <motion.p
-          className="absolute whitespace-nowrap font-['Bricolage_Grotesque:Medium',sans-serif] font-medium text-[190px] leading-[203px] text-white"
-          style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
-          animate={{ x: ["100%", "-100%"] }}
+      <div className="hidden lg:block absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="flex whitespace-nowrap"
+          animate={{ x: [0, "-50%"] }}
           transition={{
-            duration: 20,
+            duration: 3,
             repeat: Infinity,
             ease: "linear",
           }}
         >
-          Rohan Dangol — Rohan Dangol — Rohan Dangol — Rohan Dangol —
-        </motion.p>
+          <div
+            className="text-[15vw] font-['Bricolage_Grotesque:Medium',sans-serif] opacity-80 font-medium text-white  uppercase tracking-tighter leading-none py-4"
+            style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
+          >
+            Rohan Dangol &nbsp; Rohan Dangol &nbsp; Rohan Dangol &nbsp; Rohan Dangol &nbsp;
+          </div>
+          <div
+            className="text-[15vw] font-['Bricolage_Grotesque:Medium',sans-serif] font-medium text-white opacity-80 uppercase tracking-tighter leading-none py-4"
+            style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
+          >
+            Rohan Dangol &nbsp; Rohan Dangol &nbsp; Rohan Dangol &nbsp; Rohan Dangol &nbsp;
+          </div>
+        </motion.div>
       </div>
+
 
       {/* Name Title - Tablet */}
-      <div className="hidden md:block lg:hidden absolute bottom-12 left-0 right-0 overflow-hidden">
-        <motion.p
-          className="absolute whitespace-nowrap font-['Bricolage_Grotesque:Medium',sans-serif] font-medium text-7xl md:text-8xl text-white"
-          style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
-          animate={{ x: ["100%", "-100%"] }}
+      <div className="hidden md:block lg:hidden absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="flex whitespace-nowrap"
+          animate={{ x: [0, "-50%"] }}
           transition={{
-            duration: 18,
+            duration: 12,
             repeat: Infinity,
             ease: "linear",
           }}
         >
-          Rohan Dangol — Rohan Dangol — Rohan Dangol —
-        </motion.p>
+          <div
+            className="text-[20vw] font-['Bricolage_Grotesque:Medium',sans-serif] font-medium text-white opacity-10 uppercase tracking-tighter leading-none py-4"
+            style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
+          >
+            Rohan Dangol &nbsp; Rohan Dangol &nbsp;
+          </div>
+          <div
+            className="text-[20vw] font-['Bricolage_Grotesque:Medium',sans-serif] font-medium text-white opacity-10 uppercase tracking-tighter leading-none py-4"
+            style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
+          >
+            Rohan Dangol &nbsp; Rohan Dangol &nbsp;
+          </div>
+        </motion.div>
       </div>
 
       {/* Name Title - Mobile */}
-      <div className="md:hidden pb-8 overflow-hidden">
-        <motion.h1
-          className="whitespace-nowrap font-['Bricolage_Grotesque:Medium',sans-serif] font-medium text-5xl text-white leading-tight"
-          style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
-          animate={{ x: ["100%", "-100%"] }}
+      <div className="md:hidden absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="flex whitespace-nowrap"
+          animate={{ x: [0, "-50%"] }}
           transition={{
-            duration: 15,
+            duration: 10,
             repeat: Infinity,
             ease: "linear",
           }}
         >
-          Rohan Dangol — Rohan Dangol — Rohan Dangol —
-        </motion.h1>
+          <div
+            className="text-[25vw] font-['Bricolage_Grotesque:Medium',sans-serif] font-medium text-white opacity-10 uppercase tracking-tighter leading-none py-4"
+            style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
+          >
+            Rohan Dangol &nbsp; Rohan Dangol &nbsp;
+          </div>
+          <div
+            className="text-[25vw] font-['Bricolage_Grotesque:Medium',sans-serif] font-medium text-white opacity-10 uppercase tracking-tighter leading-none py-4"
+            style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
+          >
+            Rohan Dangol &nbsp; Rohan Dangol &nbsp;
+          </div>
+        </motion.div>
       </div>
     </section>
   );
